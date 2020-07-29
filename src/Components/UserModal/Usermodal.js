@@ -4,7 +4,7 @@ import userModalStyle from './Usermodal.module.css';
 const UserModal = (props) => {
 	const data = { ...props.data };
 	const [ dateInput, setDateInput ] = useState();
-
+	//filtering data base on user date
 	let filterTable = dateInput
 		? data.activity_periods.filter((day) => {
 				let searchDate = new Date(new Date(dateInput));

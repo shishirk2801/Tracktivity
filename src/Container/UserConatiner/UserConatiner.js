@@ -11,7 +11,7 @@ const UserContainer = (props) => {
 	useEffect(() => {
 		initData();
 	}, []);
-
+	//filtering user profile base on user input
 	let filteredContent = userInput
 		? props.members.filter((member) => {
 				return !member.real_name.toLowerCase().indexOf(userInput.toLowerCase()) === true;
