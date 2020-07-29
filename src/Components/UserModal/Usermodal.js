@@ -1,17 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import userLogo from './../../assets/user.png';
 import userModalStyle from './Usermodal.module.css';
-const userModal = (props) => {
+const UserModal = (props) => {
 	const data = { ...props.data };
+	const [ dateInput, setDateInput ] = useState();
 
-	let activity_periods = data.activity_periods.map((day) => {
+	let filterTable = dateInput
+		? data.activity_periods.filter((day) => {
+				let searchDate = new Date(new Date(dateInput));
+				let findingDate = new Date(day.start_time.slice(0, -6));
+				return (
+					findingDate.getMonth() === searchDate.getMonth() &&
+					findingDate.getDate() === searchDate.getDate() &&
+					findingDate.getYear() === searchDate.getYear()
+				);
+			})
+		: data.activity_periods;
+	let activity_periods = filterTable.map((day) => {
 		return (
-			<tr>
+			<tr key={data.id + day.start_time + day.end_time}>
 				<td>{day.start_time}</td>
 				<td>{day.end_time}</td>
 			</tr>
 		);
 	});
+
 	let usageTable = (
 		<div className={userModalStyle.table}>
 			<table className="table">
@@ -26,17 +39,17 @@ const userModal = (props) => {
 		</div>
 	);
 	return (
-		<div class="modal fade" id="myModal">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header border-0">
-						<h4 class="modal-title display-5">User data</h4>
-						<button type="button" class="close" data-dismiss="modal">
+		<div className="modal fade" id="myModal">
+			<div className="modal-dialog">
+				<div className="modal-content">
+					<div className="modal-header border-0">
+						<h4 className="modal-title display-5">User data</h4>
+						<button type="button" className="close" data-dismiss="modal">
 							&times;
 						</button>
 					</div>
 
-					<div class="modal-body">
+					<div className="modal-body">
 						<div>
 							<img style={{ width: '60%' }} src={userLogo} alt="userPP" />
 							<h3 className="display-6 ">{data.real_name}</h3>
@@ -44,14 +57,18 @@ const userModal = (props) => {
 								<b>Active sessions:</b>
 							</p>
 
-							<input className={userModalStyle.DateInput} type="date" />
+							<input
+								className={userModalStyle.DateInput}
+								type="date"
+								onChange={(e) => setDateInput(e.target.value)}
+							/>
 
 							{usageTable}
 						</div>
 					</div>
 
-					<div class="modal-footer border-0">
-						<button type="button" class="btn btn-danger" data-dismiss="modal">
+					<div className="modal-footer border-0">
+						<button type="button" className="btn btn-danger" data-dismiss="modal">
 							Close
 						</button>
 					</div>
@@ -61,4 +78,4 @@ const userModal = (props) => {
 	);
 };
 
-export default userModal;
+export default UserModal;

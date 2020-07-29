@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Header from './Components/Header/Header';
-import UserContainer from './Components/UserConatiner/UserConatiner';
+import UserContainer from './Container/UserConatiner/UserConatiner';
 
 function App() {
 	return (

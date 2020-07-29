@@ -1,6 +1,6 @@
 import React from 'react';
 import UsercardStyle from './UserCard.module.css';
-import Userlogo from './../../../assets/user.png';
+import Userlogo from './../../assets/user.png';
 
 const UserCard = (props) => {
 	const { userData } = props;
@@ -9,7 +9,7 @@ const UserCard = (props) => {
 
 	return (
 		<div className={UsercardStyle.Card}>
-			<img src={Userlogo} class={UsercardStyle.UserPP} alt="profile" />
+			<img src={Userlogo} className={UsercardStyle.UserPP} alt="profile" />
 			<hr />
 			<div className="card-body">
 				<h5 className="card-title">{real_name}</h5>
@@ -20,7 +20,7 @@ const UserCard = (props) => {
 				</p>
 				<button
 					type="button"
-					class="btn btn-outline-dark"
+					className="btn btn-outline-dark"
 					id="modalbtn"
 					data-toggle="modal"
 					data-target="#myModal"
