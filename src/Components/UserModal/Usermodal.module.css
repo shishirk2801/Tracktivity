@@ -1,0 +1,29 @@
+.table {
+	height: 100px;
+	overflow-y: scroll;
+	position: relative;
+	margin: auto;
+	text-align: center;
+}
+.DateInput {
+	position: relative;
+	top: 0px;
+	left: 110px;
+	padding: 3px;
+	border-radius: 10px;
+	border: 0.2px solid rgba(0, 0, 0, 0.342);
+	margin: 10px;
+}
+
+@media screen and (max-width: 762px) {
+	.DateInput {
+		left: 80px;
+		padding: 2px;
+		outline: none;
+	}
+	.DateInput::Before {
+		content: "Date";
+		margin: 3px;
+		text-align: center;
+	}
+}
