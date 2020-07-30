@@ -1,4 +1,4 @@
-It's a User activity Tracking   app built using React and redux . . The User data are fetched from api endpoint   https://5f200574fba6d400169d480b.mockapi.io/api/useractivity/data. All the states are maintained using Redux funtions .
+It's a User activity Tracking   app built using React and redux . The User data are fetched from api endpoint   https://5f200574fba6d400169d480b.mockapi.io/api/useractivity/data. All the states are maintained using Redux funtions .
 Live demo :https://tractivity-cf1a7.web.app/
 <br/>
 <hr/>
