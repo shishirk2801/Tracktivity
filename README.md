@@ -1,5 +1,7 @@
-Its a User activity Tracking   app built using React and redux . . The User data are fetched from api :https://mockapi.io/  where the darta is hosted. All the states are maintained using Redux funtions .
+It's a User activity Tracking   app built using React and redux . . The User data are fetched from api endpoint   https://5f200574fba6d400169d480b.mockapi.io/api/useractivity/data. All the states are maintained using Redux funtions .
 Live demo :https://tractivity-cf1a7.web.app/
+<br/>
+<hr/>
 Available Scripts
 In the project directory, you can run: Clone the project into local
 
@@ -38,18 +40,7 @@ Resources
 create-react-app : The following link has all the commands that can be used with create-react-app https://github.com/facebook/create-react-app
 
 ReactJS : Refer to https://reactjs.org/ to understand the concepts of ReactJS
-Api use : https://newsapi.org/
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Api use :https://mockapi.io/
 
-### Advanced Configuration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# Tracktivity
